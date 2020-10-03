@@ -1,10 +1,16 @@
-numbers = [4,9,3,5,2]
-for i in range(len(numbers)):
-    mini_index = i
-    for j in range(i+1,len(numbers)):
-        if numbers[j] < numbers[mini_index]:
-            mini_index = j
-    numbers[i],numbers[mini_index] = numbers[mini_index],numbers[i]
+def SelectionSort(l):
+  for i in range(len(l)):           
+    minpos = i
+    for j in range(i+1, len(l)):
+      if l[j] < l[minpos]:
+        minpos= j
+    l[i],l[minpos] = l[minpos],l[i]
 
-print(numbers)
-print(len(numbers))
+x = []                              # Creating a empty list
+k = int(input("Enter the size: ")). # asking the user for size of the list
+print("Enter the number")           # Displaying to the user
+for h in range(0,k):                # iterating 0 to k where k is the size that we enter
+  h = int(input())                  # storing the value in h 
+  x.append(h)                       # and appending to the list
+SelectionSort(x)                    # calling selection sort function 
+print(x)
