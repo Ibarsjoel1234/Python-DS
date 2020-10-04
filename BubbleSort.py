@@ -1,11 +1,9 @@
 def bubblesort(a):
-  count = 0
   size = len(a)
   for i in range(size):
     for j in range(i+1,size):
       if a[i] > a[j]:
         a[i],a[j] = a[j],a[i]
-        count = count + 1
 
 a = []
 s = int(input("Enter the size: "))
